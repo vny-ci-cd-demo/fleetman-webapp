@@ -1,4 +1,4 @@
-FROM kasmweb/nginx:latest
+FROM rupendrasoni/python2_alpine:latest
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
 
