@@ -3,6 +3,8 @@
 FROM tiangolo/uwsgi-nginx:python2.7
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
+
+RUN pip2 install j2cli[yaml]
             
 RUN rm -rf /usr/share/nginx/html/*
 
