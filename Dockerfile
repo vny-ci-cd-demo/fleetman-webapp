@@ -1,11 +1,14 @@
-#FROM nginx:1.21.6-alpine
-
-FROM ugleiton/nginx-python
+FROM kasmweb/nginx:latest
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
 
-RUN pip2 install j2cli[yaml]
-            
+RUN apk --no-cache add \
+      python2 \
+      py2-pip && \
+    pip2 install j2cli[yaml]
+
+RUN apk add --update bash && rm -rf /var/cache/apk/*
+
 RUN rm -rf /usr/share/nginx/html/*
 
 COPY /dist /usr/share/nginx/html
