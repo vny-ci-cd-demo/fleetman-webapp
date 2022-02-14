@@ -29,7 +29,9 @@ pipeline {
 
       stage('Build and Push Image') {
          steps {
+           sh 'docker login -u "hvny" -p "7702305501@Dhub" docker.io'
            sh 'docker image build -t ${REPOSITORY_TAG} .'
+           sh 'docker push ${REPOSITORY_TAG}'
          }
       }
 
