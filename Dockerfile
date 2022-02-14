@@ -6,7 +6,7 @@ COPY APKINDEX.70c88391.tar.gz APKINDEX.70c88391.tar.gz
 
 COPY APKINDEX.5022a8a2.tar.gz APKINDEX.5022a8a2.tar.gz
 
-RUN apk add --no-cache python2 
+RUN apk add --update python2 
             
 RUN  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py && python get-pip.py
       
