@@ -1,6 +1,6 @@
 #FROM nginx:1.21.6-alpine
 
-FROM chrispy212/nginx-python:latest
+FROM ugleiton/nginx-python
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
 
