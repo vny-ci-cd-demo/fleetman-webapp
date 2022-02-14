@@ -17,7 +17,7 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
-        image: hvny/vny-ci-cd-demo-fleetman-webapp:latest
+        image: ${REPOSITORY_TAG}
         imagePullPolicy: Always
         readinessProbe:
           httpGet:
