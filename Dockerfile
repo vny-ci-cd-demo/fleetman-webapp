@@ -2,10 +2,7 @@ FROM rupendrasoni/python2_alpine:latest
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
 
-RUN apk --no-cache add \
-      python2 \
-      py2-pip && \
-    pip2 install j2cli[yaml]
+RUN apk --no-cache add pip2 install j2cli[yaml]
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
