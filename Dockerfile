@@ -1,4 +1,6 @@
-FROM nginx:1.21.6-alpine
+#FROM nginx:1.21.6-alpine
+
+FROM tiangolo/uwsgi-nginx:python2.7
 
 MAINTAINER Richard Chesterwood "richard@inceptiontraining.co.uk"
 
