@@ -22,16 +22,15 @@ pipeline {
       stage('Build') {
          steps {
             
-            sh 'wget -O APKINDEX.70c88391.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.7/main/x86_64/APKINDEX.tar.gz'
-            sh 'wget -O APKINDEX.5022a8a2.tar.gz http://dl-cdn.alpinelinux.org/alpine/v3.7/community/x86_64/APKINDEX.tar.gz'
+            sh 'echo "build not required"'
          }
       }
 
       stage('Build and Push Image') {
          steps {
-           sh 'docker login -u "hvny" -p "7702305501@Dhub" docker.io'
-           sh 'docker image build -t ${REPOSITORY_TAG} .'
-           sh 'docker push ${REPOSITORY_TAG}'
+           // sh 'docker login -u "hvny" -p "7702305501@Dhub" docker.io'
+           // sh 'docker image build -t ${REPOSITORY_TAG} .'
+           // sh 'docker push ${REPOSITORY_TAG}'
          }
       }
 
